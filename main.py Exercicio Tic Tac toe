@@ -1,0 +1,55 @@
+#TIC TAC TOE
+#Solicitar qual jogador irá iniciar: X ou O
+#Cada jogador pode fazer uma única jogada por vez
+#Após o jogador finalizar a jogada solicitar a jogada do proximo jogador 
+#O ganhador será o que fizer 3 marcações em sequência, seja ela na linha, na coluna ou na diagonal
+#O JOGO DEVE DETERMINAR QUANDO:
+#tiver um ganhador
+#forem executadas 9 jogadas (máximo)
+#algum jogador informar o caracter $
+
+#Ele esta recebendo Quantidade jogo = 0 
+
+linha1 = "_"
+linha2 = "_"
+linha3 = "_"
+qtdjogo = 0
+jogador =""
+vencedor = ""
+jogada = ""
+while  jogador not in ("X", "O"):
+  jogador = input("qual o jogador vai iniciar? (X/O?): ")
+  if jogador not in ("X", "O"):
+    print("jogador invalido!! Use: X ou O!!")
+while (qtdjogo <9 and vencedor == "" and jogada !="$"):
+  qtdjogo+=1
+  jogada = input("Digite a jogada "+str(qtdjogo)+", jogador: "+jogador+":")
+  if (jogador == "X"):
+     jogador = "O"
+  else:
+       jogador = "X"
+  if (qtdjogo == 4):
+         vencedor = jogador
+#está mostrando os números da Tabela  jogada 
+print("11 12 13")
+print("21 22 23")
+print("31 32 33")
+#Aqui está fazendo loop que é quantidade do jogo mennor 4
+while (qtdjogo <4):
+#jogada está recebendo qual sua jogada que é mais jogador
+    jogada = int(input("qual a sua jogada "+jogador))
+    if jogada in (11,12,13,21,22,23,31,32,33):
+#jogo está comparando se igual X ou O
+      if (jogador == "X" ): 
+        jogador = "O"
+#Senão    
+      else: 
+#Jogador recebe X
+        jogador = "X"
+#Aqui ele recebe mais  uma quantidade do jogo       
+      qtdjogo +=1  
+#Senão     
+else:
+#Ele mostra jogada Inválida
+      print("Jogada Inválida!!")
+ 
