@@ -8,8 +8,6 @@
 #forem executadas 9 jogadas (máximo)
 #algum jogador informar o caracter $
 
-#Ele esta recebendo Quantidade jogo = 0 
-
 linha1 = "_"
 linha2 = "_"
 linha3 = "_"
